@@ -1,13 +1,14 @@
 :root {
   --white: rgba(242, 242, 242, 1);
-  --grey: rgba(201, 201, 201, 1);
+  /* --grey: rgba(201, 201, 201, 1);
   --dark-blue1: rgba(56, 69, 101, 1);
   --dark-blue0\.9: rgba(56, 69, 101, 0.9);
-  --dark-blue0\.5: rgba(56, 69, 101, 0.5);
+  --dark-blue0\.5: rgba(56, 69, 101, 0.5); */
 }
 
 * {
   box-sizing: border-box;
+  text-shadow: 0 0 2px #000000;
 }
 
 body {
@@ -15,24 +16,84 @@ body {
   font-family: Verdana, Tahoma, sans-serif;
   font-size: 1rem; 
   color: var(--white);
+  /* text-align: center; */
   /* possibly h1 Merriweather/serif & p Open Sans/sans-serif? */
-
-  background-image: url('images/pink-glass_1920.jpg');
+  
+  background-image: url('images/colorful_1280.png');
   background-repeat: no-repeat;
   background-attachment:fixed;
   background-size:cover;
 }
 
+/* FLEX */
+.flex-box {
+  display: flex;
+  justify-content: space-around;
+  /* align-items: stretch; */
+  text-align: center;
+  padding: 1rem;
+  margin: 0.5rem;
+}
+.column {
+  flex-direction: column;
+}
+.outline {
+  /* border:10px solid var(--blue); */
+  border:5px solid var(--white);
+  box-shadow:0 0 2px #000000;
+}
+
 /* HEADER */
 .header {
-  text-align: center;
-  text-shadow: 0 0 2px #000000;
   padding: 20px;
   border:solid var(--blue) 1px;
-  /* border:solid rgba(56, 69, 101, 0.9) 1px */
 }
 
 h1 {
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 3rem;
+}
+
+/* CARD */
+.card {
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
+  /* max-width: 300px; */
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+  /* text-align: center; */
+  cursor: pointer;
+}
+.card:hover {
+  box-shadow: 5px 4px 10px #8B0000;
+}
+img {
+  border-bottom: 2px solid white;
+  /* border-radius: 4px; */
+  /* padding: 5px;  */
+  max-width: 100%;
+  max-height: 100%;
+  /* max-width: 200px;
+  max-height: 150px;
+  min-width: 200px;
+  min-height: 150px; */
+}
+.card a {
+  text-decoration: none;
+  color: white;
+}
+
+/* FOOTER */
+.footer {
+
+}
+
+/* RESPONSIVENESS */
+/* Responsive layout - when the screen is less than 600px wide,
+make the two sub columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .direction {
+    flex-direction: column;
+  }
 }
