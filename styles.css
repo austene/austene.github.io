@@ -1,0 +1,38 @@
+:root {
+  --white: rgba(242, 242, 242, 1);
+  --grey: rgba(201, 201, 201, 1);
+  --dark-blue1: rgba(56, 69, 101, 1);
+  --dark-blue0\.9: rgba(56, 69, 101, 0.9);
+  --dark-blue0\.5: rgba(56, 69, 101, 0.5);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Verdana, Tahoma, sans-serif;
+  font-size: 1rem; 
+  color: var(--white);
+  /* possibly h1 Merriweather/serif & p Open Sans/sans-serif? */
+
+  background-image: url('images/pink-glass_1920.jpg');
+  background-repeat: no-repeat;
+  background-attachment:fixed;
+  background-size:cover;
+}
+
+/* HEADER */
+.header {
+  text-align: center;
+  text-shadow: 0 0 2px #000000;
+  padding: 20px;
+  border:solid var(--blue) 1px;
+  /* border:solid rgba(56, 69, 101, 0.9) 1px */
+}
+
+h1 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size:46px;
+}
